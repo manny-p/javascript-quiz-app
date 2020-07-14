@@ -9,13 +9,13 @@ function initialize() {
   document.getElementById('app').innerHTML = `
   <div class="container-game">
   <div class="container-question hide">
-    <div id="question" class="question">Question XYZ</div>
+    <div id="question" class="question">Question XYZ Test</div>
   </div>
   <div id="btn-answers" class="container-btn-answers">
-    <button class="btn">btn1</button>
-    <button class="btn">btn2</button>
-    <button class="btn">btn3</button>
-    <button class="btn">btn4</button>
+    <button class="btn-answers btn">btn1</button>
+    <button class="btn-answers btn">btn2</button>
+    <button class="btn-answers btn">btn3</button>
+    <button class="btn-answers btn">btn4</button>
   </div>
   <div class="container-clicker">
     <button id="btn-start" class="btn-start btn">start</button>
@@ -44,5 +44,3 @@ function loadQuestionScreen() {
   // render out the 4 answer choices and set up listeners for choosing a given answer (code in there then "takes it from there")
   // TODO, think about how to make the "questions" array and the "currentQuestionIndex" available even outside this function - maybe just put it on window (making it global)
 }
-
-// TODO: set up JSON file (can make it just a regular JS array that you export - not technically JSON), that has the questions, and answers for each question
