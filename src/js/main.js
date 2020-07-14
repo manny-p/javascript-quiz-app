@@ -2,7 +2,7 @@ import './../scss/main.scss'
 import renderQuestionText from './renderQuestionText'
 // import func from './func'
 const questions = [
-  'question 1',
+  'question 1: test',
   'question 2',
   'question 3',
   'question 4',
@@ -16,16 +16,19 @@ const questions = [
 
 let currentQuestionIndex = 0
 
-;(function initialize() {
+function initialize() {
   // render the button that lets you start the game
   document.getElementById('app').innerHTML = `
-    <button id="startButton"></button>
+    <button id="start-btn">start</button>
+    <button id="next-btn">next</button>
   `
 
-  document
-    .getElementById('startButton')
-    .addEventListener('click', () => loadQuestionScreen())
-})()
+  // document
+  //   .getElementById('startGame')
+  //   .addEventListener('click', () => loadQuestionScreen())
+}
+
+initialize()
 
 // TODO: move out
 function loadQuestionScreen() {
