@@ -8,10 +8,10 @@ function initialize() {
   // render the button that lets you start the game
   document.getElementById('app').innerHTML = `
   <div class="container-game">
-  <div id="container-question" class="hide">
-    <div id="question">Question XYZ</div>
+  <div class="container-question hide">
+    <div id="question" class="question">Question XYZ</div>
   </div>
-  <div id="container-btn-answers" class="btn-answers">
+  <div id="btn-answers" class="container-btn-answers">
     <button class="btn">btn1</button>
     <button class="btn">btn2</button>
     <button class="btn">btn3</button>
