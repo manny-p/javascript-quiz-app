@@ -1,28 +1,32 @@
 import './../scss/main.scss'
 import renderQuestionText from './renderQuestionText'
 // import func from './func'
-const questions = [
-  'question 1: test',
-  'question 2',
-  'question 3',
-  'question 4',
-  'question 5',
-  'question 6',
-  'question 7',
-  'question 8',
-  'question 9',
-  'question 10',
-]
 
 let currentQuestionIndex = 0
 
 function initialize() {
   // render the button that lets you start the game
   document.getElementById('app').innerHTML = `
-    <button id="start-btn">start</button>
-    <button id="next-btn">next</button>
+  <div class="container-game">
+  <div id="container-question" class="hide">
+    <div id="question">Question XYZ</div>
+  </div>
+  <div id="container-btn-answers" class="btn-answers">
+    <button class="btn">btn1</button>
+    <button class="btn">btn2</button>
+    <button class="btn">btn3</button>
+    <button class="btn">btn4</button>
+  </div>
+  <div class="container-clicker">
+    <button id="btn-start" class="btn-start btn">start</button>
+    <button id="btn-next" class="btn-next btn hide">next</button>
+  </div>
+</div> 
   `
-
+  {
+    /* <button id="start-btn">start</button>
+    <button id="next-btn">next</button> */
+  }
   // document
   //   .getElementById('startGame')
   //   .addEventListener('click', () => loadQuestionScreen())
