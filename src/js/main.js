@@ -18,5 +18,24 @@ let currentQuestionIndex = 0
 
 ;(function initialize() {
   // render the button that lets you start the game
-  renderQuestionText(questions[currentQuestionIndex])
+  document.getElementById('app').innerHTML = `
+    <button id="startButton"></button>
+  `
+
+  document
+    .getElementById('startButton')
+    .addEventListener('click', () => loadQuestionScreen())
 })()
+
+// TODO: move out
+function loadQuestionScreen() {
+  // remove the start button element
+  // add the question area to the app div: <div id="questionArea"></div>
+  // render out the first question
+  renderQuestionText(questions[currentQuestionIndex])
+
+  // render out the 4 answer choices and set up listeners for choosing a given answer (code in there then "takes it from there")
+  // TODO, think about how to make the "questions" array and the "currentQuestionIndex" available even outside this function - maybe just put it on window (making it global)
+}
+
+// TODO: set up JSON file (can make it just a regular JS array that you export - not technically JSON), that has the questions, and answers for each question
