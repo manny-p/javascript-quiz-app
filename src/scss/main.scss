@@ -25,11 +25,10 @@ body {
 
 .container-game {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  width: 50rem;
-  //max-width: 90%;
-  padding: 1.5rem;
+  max-width: 90%;
+  padding: 3rem;
   border-radius: 0.75rem;
-  background-color: rgb(0, 201, 133);
+  background-color: #00c985;
   box-shadow: 0 0 1rem 0.1rem;
 }
 
@@ -39,24 +38,23 @@ body {
   justify-content: space-around;
   overflow-x: auto;
 }
+
 .question {
   font-size: 3rem;
   font-family: 'Montserrat', sans-serif;
   color: #ffffff;
-  text-shadow: 0.15rem 0.15rem black;
+  text-shadow: 0.2rem 0.2rem black;
 }
 
-.container-btn-answers {
+.container-answers {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  gap: 1rem;
-  margin: 2rem 0;
-
-  //
+  gap: 1.5rem;
+  margin: 3rem 0;
 }
 
 .btn-answers {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-family: 'Roboto', sans-serif;
   width: 80%;
   justify-self: center;
@@ -68,20 +66,26 @@ body {
   align-items: center;
 }
 
-.btn {
-  padding: 1rem 1rem;
-  border: 0.25rem;
-  border-style: solid;
-  border-radius: 0.75rem;
-  //color: white;
-  outline: none;
-}
 .btn-start,
 .btn-next {
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding: 1rem;
+  &:focus {
+    background-color: #fa660ad6;
+  }
 }
 
-.hide {
-  // display: none;
+.btn {
+  padding: 1rem 1rem;
+  border: 0.15rem;
+  border-style: solid;
+  border-radius: 0.75rem;
+  outline: none;
+  &:hover {
+    background-color: #fa680a;
+  }
+}
+
+.hidden {
+  display: none;
 }
