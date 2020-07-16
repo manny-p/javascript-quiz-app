@@ -3,7 +3,7 @@
 
 const questions = [
   {
-    question: 'question 3',
+    question: 'question 3 yooooo',
     answers: [
       {
         value: 'blaahhhhh',
@@ -39,12 +39,15 @@ const questions = [
         correct: false,
       },
       {
-        value: 'this is the answer',
+        value: 'this one',
         correct: false,
       },
     ],
   },
 ]
+
+// console.log(questions[index].answers.correct)
+
 // {
 //   question2: 'question 2',
 //   answer2: 'answer 2',

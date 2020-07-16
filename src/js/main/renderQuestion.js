@@ -1,5 +1,17 @@
-export default function renderQuestion(text) {
-  document.getElementById('question').innerHTML = `
-  <div>${text}</div>
+import setupCheckAnswer from './setupCheckAnswer'
+
+export default function renderQuestion(id, value) {
+  document.getElementById(id).innerHTML = `
+  <div>${value}</div>
   `
+
+  // set up listeners on the questions
+  setupCheckAnswer()
+
+  // clicking a question should "select" it, both UX-wise and behind the scenes
+
+  // set up listener on next button. Clicking next button should:
+  // 1. give feedback to the user for right/wrong
+  // 2. record right/wrong for that given question
+  // 3. advance the user, or don't
 }

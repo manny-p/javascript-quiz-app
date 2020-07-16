@@ -1,7 +1,6 @@
-// import renderQuestion from './renderQuestion'
-// import questions from '../state/questions'
-
 import renderQuestion from './renderQuestion'
+import questions from '../state/questions'
+import _ from 'lodash'
 
 export default function startGame() {
   // confetti.start()
@@ -24,14 +23,27 @@ export default function startGame() {
   // show user next button
   btnNext.classList.remove('hidden')
 
-  // TODO show user the current questions
-  renderQuestion()
+  window.answers = []
+
+  // show question
+  let elementIds = ['question', 'answer0', 'answer1', 'answer2', 'answer3']
+  let shuffledQuestions = _.shuffle(questions)
+
+  for (let index = 0; index < shuffledQuestions.length; index++) {
+    let elementValues = [
+      shuffledQuestions[index].question,
+      shuffledQuestions[index].answers[0].value,
+      shuffledQuestions[index].answers[1].value,
+      shuffledQuestions[index].answers[2].value,
+      shuffledQuestions[index].answers[3].value,
+    ]
+    elementIds.map(
+      (element, index) => renderQuestion(element, elementValues[index]),
+      // if answer clicked is correct, show the button correct
+    )
+  }
 }
 
 // notes
-// let currentQuestionIndex = 0
-// add the question area to the app div: <div id="questionArea"></div>
-// render out the first question
-// renderQuestion(questions[currentQuestionIndex])
 // render out the 4 answer choices and set up listeners for choosing a given answer (code in there then "takes it from there")
 // think about how to make the "questions" array and the "currentQuestionIndex" available even outside this function - maybe just put it on window (making it global)
