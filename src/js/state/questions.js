@@ -1,24 +1,26 @@
 // Objects.keys and Object.values
 // not ideal for this situation
 
+// questions[0].answers[0].value; // Displays the first question's first answer.
+
 export default [
   {
     question: 'question x',
     answers: [
       {
-        value: '62378328',
+        value: 'num 1',
         correct: true,
       },
       {
-        value: 'this is the answer',
+        value: 'number 2',
         correct: false,
       },
       {
-        value: 'this is the answer',
+        value: 'n3',
         correct: false,
       },
       {
-        value: 'this is the answer',
+        value: '4',
         correct: false,
       },
     ],
@@ -27,19 +29,19 @@ export default [
     question: 'question y',
     answers: [
       {
-        value: 'this is the answer',
+        value: 'n1 qy',
         correct: false,
       },
       {
-        value: 'this is the answer',
+        value: 'n2 qy',
         correct: false,
       },
       {
-        value: 'this is the answer',
+        value: 'n3 qy',
         correct: false,
       },
       {
-        value: 'this is the correct choice',
+        value: 'n4 qy',
         correct: true,
       },
     ],

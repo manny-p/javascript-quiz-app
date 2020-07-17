@@ -1,6 +1,5 @@
 import questions from '../state/questions'
 import renderNextQuestion from './renderNextQuestion'
-import storeQuestionResult from './storeQuestionResult'
 
 export default function handleNextClicked() {
   // if you didn't choose an answer before selecting next, alert user
@@ -12,22 +11,19 @@ export default function handleNextClicked() {
   console.log('currently selected answer index', currentlySelectedAnswerIndex)
   console.log('index of current question', window.indexOfCurrentQuestion)
 
-  const currentAnswer = questions[window.indexOfCurrentQuestion].answers
-  const didUserGetQuestionRight =
-    currentAnswer[window.currentlySelectedAnswerIndex].correct
+  const currentQuestionObject = questions[window.indexOfCurrentQuestion]
+  const currentAnswerObject =
+    currentQuestionObject.answers[window.currentlySelectedAnswerIndex]
 
-  // TODO - add logic for storing results
-  // create a store question result function
-
-  // which question, and did you get it right or wrong?
+  // TODO review
   const resultDataItem = {
-    indexOfQuestion: window.indexOfCurrentQuestion,
-    indexOfAnswerSelected: window.currentlySelectedAnswerIndex,
-    didUserGetQuestionRight: didUserGetQuestionRight,
+    question: currentQuestionObject.question,
+    answer: currentAnswerObject.value,
+    didUserGetQuestionRight: currentAnswerObject.correct,
   }
-  storeQuestionResult(resultDataItem)
+  window.resultsData.push(resultDataItem)
 
-  if (didUserGetQuestionRight) {
+  if (resultDataItem.didUserGetQuestionRight) {
     confetti.start()
     setTimeout(() => {
       confetti.stop()
@@ -39,6 +35,7 @@ export default function handleNextClicked() {
     renderNextQuestion()
   }
 
+  // Todo append child to a div, remove child
   // if you did choose an answer before selecting next:
   // get the index of the current *question* (index in the questions.js array) --done
   // check if the index stored in window.currentlySelectedAnswerIndex is the right answer to the question
