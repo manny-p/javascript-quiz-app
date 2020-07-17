@@ -1,7 +1,7 @@
 // Objects.keys and Object.values
 // not ideal for this situation
 
-const questions = [
+export default [
   {
     question: 'question 3 yooooo',
     answers: [
@@ -28,19 +28,19 @@ const questions = [
     answers: [
       {
         value: 'this is the answer',
+        correct: false,
+      },
+      {
+        value: 'this is the answer',
+        correct: false,
+      },
+      {
+        value: 'this is the answer',
+        correct: false,
+      },
+      {
+        value: 'this is the correct choice',
         correct: true,
-      },
-      {
-        value: 'this is the answer',
-        correct: false,
-      },
-      {
-        value: 'this is the answer',
-        correct: false,
-      },
-      {
-        value: 'this one',
-        correct: false,
       },
     ],
   },
@@ -73,5 +73,3 @@ const questions = [
 //   answer7: 'answer 7',
 // },
 // ]
-
-export default questions

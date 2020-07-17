@@ -1,5 +1,6 @@
+import clearSelectedAnswerStyle from './clearSelectedAnswerStyle'
+
 export default function handleAnswerSelected(event) {
-  //
   const idAsString =
     event.target.getAttribute('id') ||
     event.target.parentNode.getAttribute('id')
@@ -7,20 +8,11 @@ export default function handleAnswerSelected(event) {
   const answerIndexAsInteger = parseInt(answerIndex)
   window.currentlySelectedAnswerIndex = answerIndexAsInteger
 
-  console.log(currentlySelectedAnswerIndex)
+  clearSelectedAnswerStyle()
 
-  // make the next button be in a state where if you click it, it counts this answer as your "choice"
+  // give that element a class to give it the "selected" style
+  document.getElementById(idAsString).classList.add('selected-answer')
 }
-
-// clicking a question should "select" it, both UX-wise and behind the scenes
-
-// set up listener on next button. Clicking next button should:
-// 1. give feedback to the user for right/wrong
-// 2. record right/wrong for that given question
-// 3. advance the user, or don't
-
-// when user clicks next button, did the user make an option
-// if not, alert
 
 // if they make a selection, is it right or wrong
 

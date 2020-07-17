@@ -1,6 +1,6 @@
 import setupCheckAnswer from './setupCheckAnswer'
 
-export default function renderQuestion(id, value) {
+export default function renderQuestionSection(id, value) {
   document.getElementById(id).innerHTML = `
   <div>${value}</div>
   `

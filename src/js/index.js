@@ -25,7 +25,7 @@ function initialize() {
   document
     .getElementById('btn-start')
     .addEventListener('click', () => startGame())
-  console.log('button clicked')
+  // console.log('button clicked')
 }
 
 initialize()
