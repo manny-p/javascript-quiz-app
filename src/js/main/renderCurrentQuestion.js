@@ -1,7 +1,10 @@
 import renderQuestionSection from './renderQuestionSection'
 import questions from '../state/questions'
+import _ from 'lodash'
 
 export default function renderCurrentQuestion() {
+  let shuffledQuestions = _.shuffle(questions)
+
   // show question
   let elementIds = ['question', 'answer0', 'answer1', 'answer2', 'answer3']
 

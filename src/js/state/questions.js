@@ -3,10 +3,10 @@
 
 export default [
   {
-    question: 'question 3 yooooo',
+    question: 'question x',
     answers: [
       {
-        value: 'blaahhhhh',
+        value: '62378328',
         correct: true,
       },
       {
@@ -24,7 +24,7 @@ export default [
     ],
   },
   {
-    question: 'question 9',
+    question: 'question y',
     answers: [
       {
         value: 'this is the answer',

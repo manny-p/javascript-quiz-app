@@ -24,7 +24,7 @@ body {
 }
 
 .container-game {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   max-width: 90%;
   padding: 3rem;
   border-radius: 0.75rem;
@@ -41,9 +41,9 @@ body {
 
 .question {
   font-size: 3rem;
-  font-family: 'Montserrat', sans-serif;
+
   color: #ffffff;
-  text-shadow: 0.2rem 0.2rem black;
+  text-shadow: 0.175rem 0.175rem black;
 }
 
 .container-answers {
@@ -92,4 +92,35 @@ body {
 
 .selected-answer {
   background: rgb(136, 84, 192);
+}
+
+.results-container {
+  // display: grid;
+  // grid-template-columns: repeat(3, auto);
+  // column-gap: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  padding: 1rem;
+  color: white;
+  text-shadow: 0.075rem 0.075rem black;
+}
+
+// .result-questions {
+// }
+
+// .user-answers {
+// }
+
+// .result-answers {
+// }
+
+.result-headline {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: white;
+  text-shadow: 0.15rem 0.15rem black;
 }

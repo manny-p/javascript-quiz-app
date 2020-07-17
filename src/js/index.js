@@ -10,10 +10,10 @@ function initialize() {
   </div>
 
   <div id="container-answers" class="container-answers hidden">
-    <button id='answer0' class="btn-answers btn">answer number 1</button>
-    <button id='answer1' class="btn-answers btn">answer number 2</button>
-    <button id='answer2' class="btn-answers btn">answer number 3</button>
-    <button id='answer3' class="btn-answers btn">answer number 4</button>
+    <button id="answer0" class="btn-answers btn">answer number 1</button>
+    <button id="answer1" class="btn-answers btn">answer number 2</button>
+    <button id="answer2" class="btn-answers btn">answer number 3</button>
+    <button id="answer3" class="btn-answers btn">answer number 4</button>
   </div>
 
   <div class="container-clicker">

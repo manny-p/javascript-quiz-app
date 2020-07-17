@@ -1,5 +1,3 @@
-import questions from '../state/questions'
-import _ from 'lodash'
 import renderCurrentQuestion from './renderCurrentQuestion'
 
 export default function startGame() {
@@ -12,19 +10,20 @@ export default function startGame() {
   // remove the start button element
   btnStart.classList.add('hidden')
   // console.log(btnStart)
+
   // show user question
   containerQuestion.classList.remove('hidden')
   // console.log(containerQuestion)
+
   // show user multiple choice options
   containerAnswers.classList.remove('hidden')
   // console.log(containerAnswers)
+
   // show user next button
   btnNext.classList.remove('hidden')
 
   window.resultsData = []
   window.indexOfCurrentQuestion = 0
-
-  let shuffledQuestions = _.shuffle(questions)
 
   renderCurrentQuestion()
 }

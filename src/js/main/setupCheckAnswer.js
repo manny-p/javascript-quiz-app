@@ -11,13 +11,6 @@ export default function setupCheckAnswer() {
     item.addEventListener('click', handleAnswerSelected),
   )
 
-  // !
-  // let foundCorrectAnswer = btnAnswers.find(item => {
-  //   item === true
-  // })
-
-  // console.log(foundCorrectAnswer)
-
   document
     .getElementById('btn-next')
     .addEventListener('click', handleNextClicked)

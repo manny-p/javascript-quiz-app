@@ -13,11 +13,3 @@ export default function handleAnswerSelected(event) {
   // give that element a class to give it the "selected" style
   document.getElementById(idAsString).classList.add('selected-answer')
 }
-
-// if they make a selection, is it right or wrong
-
-// if its right,
-// run confetti
-// append that element / replace with buttoin element "CORRECT
-
-// if its wrong, que a message
