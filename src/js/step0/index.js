@@ -1,19 +1,20 @@
-import './../scss/main.scss'
-import startGame from './main/startGame'
+import '../../scss/main.scss'
+import startGame from './startGame'
 
+// 0.A
 function initialize() {
   // render the button that lets you start the game
   document.getElementById('app').innerHTML = `
   <div class="container-game">
   <div id="container-question" class="container-question hidden">
-    <div id="question" class="question">Question XYZ Test</div>
+    <div id="question" class="question"></div>
   </div>
 
   <div id="container-answers" class="container-answers hidden">
-    <button id="answer0" class="btn-answers btn">answer number 1</button>
-    <button id="answer1" class="btn-answers btn">answer number 2</button>
-    <button id="answer2" class="btn-answers btn">answer number 3</button>
-    <button id="answer3" class="btn-answers btn">answer number 4</button>
+    <button id="answer0" class="btn-answers btn"></button>
+    <button id="answer1" class="btn-answers btn"></button>
+    <button id="answer2" class="btn-answers btn"></button>
+    <button id="answer3" class="btn-answers btn"></button>
   </div>
 
   <div class="container-clicker">

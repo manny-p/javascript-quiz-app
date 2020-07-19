@@ -21,7 +21,7 @@ export default function handleNextClicked() {
     answer: currentAnswerObject.value,
     didUserGetQuestionRight: currentAnswerObject.correct,
   }
-  window.resultsData.push(resultDataItem)
+  window.userResultsData.push(resultDataItem)
 
   if (resultDataItem.didUserGetQuestionRight) {
     confetti.start()

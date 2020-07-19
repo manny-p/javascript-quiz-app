@@ -1,6 +1,7 @@
 import handleAnswerSelected from './handleAnswerSelected'
 import handleNextClicked from './handleNextClicked'
 
+// 2.A
 export default function setupCheckAnswer() {
   const btnAnswers = document.querySelectorAll('[id^="answer"]')
 
@@ -15,8 +16,3 @@ export default function setupCheckAnswer() {
     .getElementById('btn-next')
     .addEventListener('click', handleNextClicked)
 }
-
-// log the nodeList (typeof object)
-// NodeList(4) [button#answer0.btn-answers.btn, button#answer1.btn-answers.btn, button#answer2.btn-answers.btn, button#answer3.btn-answers.btn]
-
-//console.log(btnAnswers)

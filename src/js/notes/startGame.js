@@ -22,7 +22,7 @@ export default function startGame() {
   // show user next button
   btnNext.classList.remove('hidden')
 
-  window.resultsData = []
+  window.userResultsData = []
   window.indexOfCurrentQuestion = 0
 
   renderCurrentQuestion()

@@ -124,3 +124,9 @@ body {
   color: white;
   text-shadow: 0.15rem 0.15rem black;
 }
+
+#successAudio {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}

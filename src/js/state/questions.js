@@ -26,7 +26,7 @@ export default [
     ],
   },
   {
-    question: 'question y',
+    question: 'question 2',
     answers: [
       {
         value: 'n1 qy',
@@ -43,6 +43,69 @@ export default [
       {
         value: 'n4 qy',
         correct: true,
+      },
+    ],
+  },
+  {
+    question: 'question 3',
+    answers: [
+      {
+        value: 'n1 qy',
+        correct: false,
+      },
+      {
+        value: 'n2 qy',
+        correct: false,
+      },
+      {
+        value: 'n3 qy',
+        correct: false,
+      },
+      {
+        value: 'n4 qy this one is right',
+        correct: true,
+      },
+    ],
+  },
+  {
+    question: 'question 4',
+    answers: [
+      {
+        value: 'n1 qy',
+        correct: false,
+      },
+      {
+        value: 'n2 qy correct',
+        correct: true,
+      },
+      {
+        value: 'n3 qy',
+        correct: false,
+      },
+      {
+        value: 'n4 qy',
+        correct: false,
+      },
+    ],
+  },
+  {
+    question: 'question 5',
+    answers: [
+      {
+        value: 'n1 qy',
+        correct: false,
+      },
+      {
+        value: 'n2 qy',
+        correct: false,
+      },
+      {
+        value: 'n3 true',
+        correct: true,
+      },
+      {
+        value: 'n4 qy',
+        correct: false,
       },
     ],
   },

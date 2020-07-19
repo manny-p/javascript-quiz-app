@@ -1,5 +1,5 @@
 export default function renderResultsPage() {
-  const feedback = window.resultsData.reduce((accumulator, element) => {
+  const feedback = window.userResultsData.reduce((accumulator, element) => {
     let questionCorrectText = element.didUserGetQuestionRight ? 'Yes' : 'No'
     return (accumulator += `
     <div class="results-container">

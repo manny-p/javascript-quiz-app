@@ -1,28 +1,26 @@
-import renderCurrentQuestion from './renderCurrentQuestion'
+import renderCurrentQuestion from '../step1/renderCurrentQuestion'
 
+// * 0.B
 export default function startGame() {
-  // initialize components
-  const btnStart = document.querySelector('#btn-start')
-  const btnNext = document.querySelector('#btn-next')
-  let containerQuestion = document.querySelector('#container-question')
-  let containerAnswers = document.querySelector('#container-answers')
-
   // remove the start button element
+  const btnStart = document.querySelector('#btn-start')
   btnStart.classList.add('hidden')
-  // console.log(btnStart)
-
-  // show user question
-  containerQuestion.classList.remove('hidden')
-  // console.log(containerQuestion)
-
-  // show user multiple choice options
-  containerAnswers.classList.remove('hidden')
-  // console.log(containerAnswers)
 
   // show user next button
+  const btnNext = document.querySelector('#btn-next')
   btnNext.classList.remove('hidden')
 
-  window.resultsData = []
+  // show user question
+  let containerQuestion = document.querySelector('#container-question')
+  containerQuestion.classList.remove('hidden')
+
+  // show user multiple choice options
+  let containerAnswers = document.querySelector('#container-answers')
+  containerAnswers.classList.remove('hidden')
+
+  /* set up globally available variables.
+  One for the results data, one for tracking the index of the current question. */
+  window.userResultsData = []
   window.indexOfCurrentQuestion = 0
 
   renderCurrentQuestion()
