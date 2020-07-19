@@ -5,7 +5,7 @@
 
 export default [
   {
-    question: 'question one',
+    question: 'question 1',
     answers: [
       {
         value: 'num 1',

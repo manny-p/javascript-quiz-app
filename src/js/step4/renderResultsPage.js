@@ -4,11 +4,15 @@ export default function renderResultsPage() {
     let questionCorrectText = element.didUserGetQuestionRight ? 'Yes' : 'No'
     return (accumulator += `
     <div class="results-container">
-    <div class="result-questions">Question: ${element.question}</div>
-    <div class="user-answers">Your answer: ${element.answer}</div>
-    <div class="result-answers">Correct? ${questionCorrectText}</div>
+
+    <div class="question-list">Question: ${element.question}</div>
+
+    <div class="results-user-answers">Your answer: ${element.answer}</div>
+
+    <div class="correct">Correct? ${questionCorrectText}</div>
+
     </div>`)
-  }, '<div class="result-headline">Quiz Results: <br></div>')
+  }, '<div class="results-page-title">Quiz Results: <br></div>')
 
   document.querySelector('.container-game').innerHTML = feedback
 }

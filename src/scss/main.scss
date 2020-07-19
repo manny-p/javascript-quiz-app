@@ -25,7 +25,7 @@ body {
 
 .container-game {
   font-family: 'Montserrat', sans-serif;
-  max-width: 90%;
+  max-width: 100%;
   padding: 3rem;
   border-radius: 0.75rem;
   background-color: #00c985;
@@ -35,13 +35,12 @@ body {
 .container-question {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  overflow-x: auto;
+  justify-content: space-between;
+  // overflow-x: auto;
 }
 
 .question {
   font-size: 3rem;
-
   color: #ffffff;
   text-shadow: 0.175rem 0.175rem black;
 }
@@ -49,14 +48,15 @@ body {
 .container-answers {
   display: grid;
   grid-template-columns: repeat(2, auto);
-  gap: 1.5rem;
+  gap: 2rem;
   margin: 3rem 0;
 }
 
 .btn-answers {
   font-size: 1.75rem;
   font-family: 'Roboto', sans-serif;
-  width: 80%;
+  width: 15rem;
+  max-width: 80%;
   justify-self: center;
 }
 
@@ -70,9 +70,6 @@ body {
 .btn-next {
   font-size: 2rem;
   padding: 1rem;
-  &:focus {
-    background-color: #fa660ad6;
-  }
 }
 
 .btn {
@@ -91,38 +88,37 @@ body {
 }
 
 .selected-answer {
-  background: rgb(136, 84, 192);
+  background: #fa660ad6;
 }
 
 .results-container {
-  // display: grid;
-  // grid-template-columns: repeat(3, auto);
-  // column-gap: 2rem;
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 4rem;
   align-items: center;
-
-  font-family: 'Roboto', sans-serif;
-  font-size: 2rem;
+  justify-self: center;
   padding: 1rem;
+  margin: 1rem;
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
   color: white;
   text-shadow: 0.075rem 0.075rem black;
 }
 
-// .result-questions {
-// }
-
-// .user-answers {
-// }
-
-// .result-answers {
-// }
-
-.result-headline {
+.results-page-title {
   font-size: 3rem;
-  margin-bottom: 0.5rem;
   color: white;
   text-shadow: 0.15rem 0.15rem black;
+}
+
+.results-user-answers {
+  margin: 1rem 1rem;
+}
+
+.correct {
+  // display: none;
+  // align-items: center;
+  // justify-self: center;
 }
 
 #successAudio {
