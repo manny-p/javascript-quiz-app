@@ -1,5 +1,7 @@
 // *4.A
 export default function renderResultsPage() {
+  document.querySelector('.container-game').style.visibility = 'visible'
+
   const feedback = window.userResultsData.reduce((accumulator, element) => {
     let questionCorrectText = element.didUserGetQuestionRight ? 'Yes' : 'No'
     return (accumulator += `
