@@ -62,5 +62,4 @@ npm run build
 ![wireframe](img/sei-p1-wireframe.png)
 
 ## Sprint Board
-
-![sprintboard](img/sei-p1-sprintboard.png)
+https://trello.com/b/dEoYhGG4/sei-p1-quiz-sprint-7-13-7-17
