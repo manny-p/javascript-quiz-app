@@ -1,7 +1,8 @@
 import renderQuestionSection from './renderQuestionSection'
 import setupCheckAnswer from '../step2/setupCheckAnswer'
-// import clearSelectedAnswerStyle from '../step2/clearSelectedAnswerStyle'
 import _ from 'lodash'
+
+// GL: We have template, and now are putting data the page, then we can a separate function to set up the event handlers for check answer
 
 // *1.A
 export default function renderCurrentQuestion() {
@@ -21,6 +22,7 @@ export default function renderCurrentQuestion() {
     renderQuestionSection(element, elementValues[index]),
   )
 
+  // *GL sets up event handlers
   // set up listeners on the questions
   setupCheckAnswer()
 }

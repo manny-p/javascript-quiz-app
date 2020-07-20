@@ -2,6 +2,8 @@ import renderCurrentQuestion from '../step1/renderCurrentQuestion'
 import renderResultsPage from '../step4/renderResultsPage'
 
 // *3.A
+
+// High Level GL: loops back to step 2 until quiz is finsihed
 export default function renderNextQuestion() {
   // if we're already at the last question
   if (window.indexOfCurrentQuestion === questions.length - 1) {
