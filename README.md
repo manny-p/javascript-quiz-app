@@ -1,16 +1,62 @@
-# quiz app
+# Quiz App
 
-- multiple choice quiz web app built using front-end technologies with parcel web application bundler
-- project implemented during software engineering immersive bootcamp @ general assembly
+- Multiple choice quiz web app built using front-end technologies with parcel web application bundler
+- Project implemented during software engineering immersive bootcamp @ general assembly
 
-## customer journey
+---
+
+- Hosted on netlify with continuous integration and deployment at: https://studycards.io/
+
+---
+
+# Getting Started
+
+---
+
+## Prerequisites
+
+### NPM
+
+```
+npm i
+```
+
+### Parcel
+
+```
+npm install -g parcel-bundler
+```
+
+- More info: https://parceljs.org/
+
+---
+
+## Installing
+
+### Dev
+
+```
+npm run dev
+```
+
+---
+
+## Deployment
+
+### Build
+
+```
+npm run build
+```
+
+## Customer Journey
 
 ![customer-journey](img/sei-p1-quiz-flowchart.png)
 
-## game logic / workflow
+## Game logic / Workflow
 
 ![workflow](img/sei-p1-quiz.png)
 
-## wireframe
+## Wireframe
 
 ![wireframe](img/sei-p1-wireframe.png)
