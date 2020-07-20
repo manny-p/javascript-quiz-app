@@ -60,3 +60,7 @@ npm run build
 ## Wireframe
 
 ![wireframe](img/sei-p1-wireframe.png)
+
+## Sprint Board
+
+![sprintboard](img/sei-p1-sprintboard.png)
