@@ -8,25 +8,19 @@ $color-tertiary-selected: rgba(250, 102, 10, 0.839);
     width: 42.5rem;
     max-width: 80%;
     padding: 1.5rem;
-  }
 
-  .container-question {
-    margin-top: 2rem;
+    .container-answers {
+      grid-template-columns: 1fr;
 
-    .question {
-      font-size: 1.5rem;
-    }
-  }
-
-  .container-answers {
-    grid-template-columns: 1fr;
-
-    .btn-answers {
-      font-size: 1.75rem;
+      .btn-answers {
+        font-size: 1.75rem;
+      }
     }
   }
 
   .container-results-title {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
     font-size: 3rem;
   }
 

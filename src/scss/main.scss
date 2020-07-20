@@ -145,6 +145,17 @@ body {
   font-size: 7rem;
   padding: 3rem 8rem;
   margin: 5rem;
+  animation: fade 3s ease forwards;
+  -webkit-animation: fadeIn 5s ease forwards;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
 
 .btn-next {
