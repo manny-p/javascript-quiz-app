@@ -1,20 +1,25 @@
-import questions from '../state/questions'
 import renderNextQuestion from '../step3/renderNextQuestion'
 import clearSelectedAnswerStyle from './clearSelectedAnswerStyle'
+import handleAnswerResult from './handleAnswerResult'
 
-// 2.D
+// *2.D
 export default function handleNextClicked() {
-  document
-    .getElementById('btn-next')
-    .removeEventListener('click', handleNextClicked)
-
   // if you didn't choose an answer before selecting next, alert user
   if (window.currentlySelectedAnswerIndex === null) {
     alert("You didn't make a selection")
     return
   }
 
-  const currentQuestionObject = questions[window.indexOfCurrentQuestion]
+  // disable next button (for now) while processing next button click
+  // if we didn't do this, it was skipping questions when clicking the button a few times quickly
+  // doing something like that on purspose to "stress test" the app is called "negative testing"
+  document
+    .getElementById('btn-next')
+    .removeEventListener('click', handleNextClicked)
+
+  // track the the users's answer to the question, alongside what the question was and whether they got it right
+  const currentQuestionObject = window.questions[window.indexOfCurrentQuestion]
+
   const currentAnswerObject =
     currentQuestionObject.answers[window.currentlySelectedAnswerIndex]
 
@@ -25,20 +30,9 @@ export default function handleNextClicked() {
   }
   window.userResultsData.push(userResultDataItem)
 
+  // clear the background color for selected answer, because we don't want to see that answer styled as "selected"  when you go to the next question
   clearSelectedAnswerStyle()
 
-  if (userResultDataItem.didUserGetQuestionRight) {
-    confetti.start()
-    const audioElement = document.getElementById('successAudio')
-    audioElement.play()
-    setTimeout(() => {
-      confetti.stop()
-      alert('You got it right!')
-      audioElement.load()
-      renderNextQuestion()
-    }, 2000)
-  } else {
-    alert('You got it wrong!')
-    renderNextQuestion()
-  }
+  // handle user feedback and next steps for "got it right" case/"got it wrong" case
+  handleAnswerResult(userResultDataItem.didUserGetQuestionRight)
 }

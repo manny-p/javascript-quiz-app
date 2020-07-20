@@ -1,7 +1,13 @@
 import '../../scss/main.scss'
 import startGame from './startGame'
 
-// 0.A
+// *0.A
+
+// *User Story, as a user, I want to hit the start game button, so I can take the quiz"
+
+// Game Logic:
+// render the button and the html elements represented in a template literal
+
 function initialize() {
   // render the button that lets you start the game
   document.getElementById('app').innerHTML = `
@@ -18,11 +24,13 @@ function initialize() {
   </div>
 
   <div class="container-clicker">
-    <button id="btn-start" class="btn-start btn">start</button>
-    <button id="btn-next" class="btn-next btn hidden">next</button>
+    <button id="btn-start" class="btn-start btn">Start</button>
+    <button id="btn-next" class="btn-next btn hidden">Next</button>
   </div>
 </div>
   `
+
+  // listens for user event on click of next button
   document
     .getElementById('btn-start')
     .addEventListener('click', () => startGame())

@@ -1,10 +1,10 @@
 import renderQuestionSection from './renderQuestionSection'
-import questions from '../state/questions'
 import setupCheckAnswer from '../step2/setupCheckAnswer'
-import clearSelectedAnswerStyle from '../step2/clearSelectedAnswerStyle'
 import _ from 'lodash'
 
-// * 1.A
+// GL: We have template, and now are putting data the page, then we can a separate function to set up the event handlers for check answer
+
+// *1.A
 export default function renderCurrentQuestion() {
   // let shuffledQuestions = _.shuffle(questions) TODO implement
 
@@ -12,17 +12,17 @@ export default function renderCurrentQuestion() {
   let elementIds = ['question', 'answer0', 'answer1', 'answer2', 'answer3']
 
   let elementValues = [
-    questions[window.indexOfCurrentQuestion].question,
-    questions[window.indexOfCurrentQuestion].answers[0].value,
-    questions[window.indexOfCurrentQuestion].answers[1].value,
-    questions[window.indexOfCurrentQuestion].answers[2].value,
-    questions[window.indexOfCurrentQuestion].answers[3].value,
+    window.questions[window.indexOfCurrentQuestion].question,
+    window.questions[window.indexOfCurrentQuestion].answers[0].value,
+    window.questions[window.indexOfCurrentQuestion].answers[1].value,
+    window.questions[window.indexOfCurrentQuestion].answers[2].value,
+    window.questions[window.indexOfCurrentQuestion].answers[3].value,
   ]
-  elementIds.map(
-    (element, index) => renderQuestionSection(element, elementValues[index]),
-    // if answer clicked is correct, show the button correct
+  elementIds.map((element, index) =>
+    renderQuestionSection(element, elementValues[index]),
   )
 
+  // *GL sets up event handlers
   // set up listeners on the questions
   setupCheckAnswer()
 }

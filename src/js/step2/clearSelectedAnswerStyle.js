@@ -1,4 +1,4 @@
-// 2.C
+// *2.C
 export default function() {
   // clear out the "selected" style for all buttons
   const btnAnswers = document.querySelectorAll('[id^="answer"]')
