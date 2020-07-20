@@ -2,15 +2,9 @@ import clearSelectedAnswerStyle from './clearSelectedAnswerStyle'
 
 // *2.B
 
-// *although each m/c answers was being assigned this event handler, when the user cliked the div within the button, the event.target was 'div', and not 'button'
-
-// (the reason this handler was still called when you click on div is that the div is, within the dom tree, located inside the button, and so the button receives the div click event due to the event bubbling from the div to the button
-
-// aka event bubbling
+// event bubbling
 
 export default function handleAnswerSelected(event) {
-  // aka most mission critical section
-
   let idAsString
 
   if (event.target.getAttribute('id')) {

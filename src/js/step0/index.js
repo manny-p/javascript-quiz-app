@@ -4,7 +4,7 @@ import startGame from './startGame'
 
 // *0.A
 
-// *User Story, as a user, I want to hit the start game button, so I can take the quiz"
+// *User Story, as a user, I want to hit the start game button, so I can take the quiz
 
 // Game Logic:
 // render the button and the html elements represented in a template literal
