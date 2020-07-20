@@ -19,6 +19,7 @@
     "boo": "^2.0.0",
     "lo": "^0.40.0",
     "lodash": "^4.17.19",
-    "lodash.shuffle": "^4.2.0"
+    "lodash.shuffle": "^4.2.0",
+    "scss": "^0.2.4"
   }
 }

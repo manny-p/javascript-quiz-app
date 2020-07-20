@@ -1,0 +1,59 @@
+$color-primary: rgb(136, 84, 192);
+$color-secondary: rgb(0, 201, 133);
+$color-tertiary: rgb(250, 104, 10);
+$color-tertiary-selected: rgba(250, 102, 10, 0.839);
+
+@media (max-width: 50rem) {
+  .container-game {
+    width: 42.5rem;
+    max-width: 80%;
+    padding: 1.5rem;
+  }
+
+  .container-question {
+    margin-top: 2rem;
+
+    .question {
+      font-size: 1.5rem;
+    }
+  }
+
+  .container-answers {
+    grid-template-columns: 1fr;
+
+    .btn-answers {
+      font-size: 1.75rem;
+    }
+  }
+
+  .container-results-title {
+    font-size: 3rem;
+  }
+
+  .container-user-results {
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 14vh;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .btn-start {
+    font-size: 3.5rem;
+    padding: 1.5rem 4rem;
+    margin: 2.5rem;
+  }
+
+  .btn-next {
+    font-size: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  span {
+    font-size: 1.5rem;
+  }
+}

@@ -1,4 +1,5 @@
 import '../../scss/main.scss'
+import '../../scss/mobile.scss'
 import startGame from './startGame'
 
 // *0.A

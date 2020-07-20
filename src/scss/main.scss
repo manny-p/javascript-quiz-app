@@ -92,11 +92,14 @@ body {
   column-gap: 5rem;
   padding: 2rem 0.5rem 2rem 2.5rem;
   margin-top: 1rem;
-  //width: 80rem;
+  line-height: 2.5rem;
+  height: 15vh;
   font-size: 1.5rem;
   font-family: 'Roboto', sans-serif;
   color: black;
-  //text-shadow: 0.075rem 0.075rem black;
+  overflow-y: scroll;
+
+  // text-shadow: 0.075rem 0.075rem black;
   .box1 {
     grid-area: box1;
   }
@@ -156,6 +159,11 @@ body {
 
 .selected-answer {
   background: $color-tertiary-selected;
+}
+
+span {
+  font-size: 1.75rem;
+  color: $color-tertiary;
 }
 
 #successAudio,
