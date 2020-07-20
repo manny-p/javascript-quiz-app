@@ -15,7 +15,9 @@
     "sass": "^1.26.10"
   },
   "dependencies": {
+    "@ddlab/bomb": "^1.1.0",
     "boo": "^2.0.0",
+    "lo": "^0.40.0",
     "lodash": "^4.17.19",
     "lodash.shuffle": "^4.2.0"
   }

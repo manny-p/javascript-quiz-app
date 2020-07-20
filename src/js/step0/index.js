@@ -1,7 +1,7 @@
 import '../../scss/main.scss'
 import startGame from './startGame'
 
-// 0.A
+// *0.A
 function initialize() {
   // render the button that lets you start the game
   document.getElementById('app').innerHTML = `
@@ -18,8 +18,8 @@ function initialize() {
   </div>
 
   <div class="container-clicker">
-    <button id="btn-start" class="btn-start btn">start</button>
-    <button id="btn-next" class="btn-next btn hidden">next</button>
+    <button id="btn-start" class="btn-start btn">Start</button>
+    <button id="btn-next" class="btn-next btn hidden">Next</button>
   </div>
 </div>
   `

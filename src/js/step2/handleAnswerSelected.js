@@ -1,6 +1,6 @@
 import clearSelectedAnswerStyle from './clearSelectedAnswerStyle'
 
-// 2.B
+// *2.B
 export default function handleAnswerSelected(event) {
   const idAsString =
     event.target.getAttribute('id') ||

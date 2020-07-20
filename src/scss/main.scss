@@ -9,6 +9,11 @@
   box-sizing: inherit;
 }
 
+$color-primary: rgb(136, 84, 192);
+$color-secondary: rgb(0, 201, 133);
+$color-tertiary: rgb(250, 104, 10);
+$color-tertiary-selected: rgba(250, 102, 10, 0.839);
+
 html {
   font-size: 62.5%;
 }
@@ -20,67 +25,131 @@ body {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-color: rgb(136, 84, 192);
+  background-color: $color-primary;
 }
 
 .container-game {
   font-family: 'Montserrat', sans-serif;
-  max-width: 100%;
+  width: 80rem;
+  max-width: 80%;
   padding: 3rem;
-  border-radius: 0.75rem;
-  background-color: #00c985;
+  border-radius: 1.5rem;
+  background-color: $color-secondary;
   box-shadow: 0 0 1rem 0.1rem;
+  margin: 2rem auto;
 }
 
+// *questions section
 .container-question {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  // overflow-x: auto;
+  justify-content: center;
+  overflow-x: auto;
+
+  .question {
+    font-size: 2.25rem;
+    padding: 1rem;
+    background-color: white;
+    border-style: solid;
+    border-radius: 0.5em;
+    color: black;
+    // text-shadow: 0.1rem 0.1rem black;
+  }
 }
 
-.question {
-  font-size: 3rem;
-  color: #ffffff;
-  text-shadow: 0.175rem 0.175rem black;
-}
-
+// *answers section
 .container-answers {
   display: grid;
-  grid-template-columns: repeat(2, auto);
-  gap: 2rem;
-  margin: 3rem 0;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  margin: 3rem 0rem;
+
+  .btn-answers {
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    width: 20rem;
+    justify-self: center;
+    // max-width: 80%;
+  }
 }
 
-.btn-answers {
-  font-size: 1.75rem;
+// *results section
+.container-results-title {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  color: white;
+  text-shadow: 0.15rem 0.15rem black;
+}
+
+.container-user-results {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 'box1 box2 box3';
+  grid-template-rows: auto;
+  column-gap: 5rem;
+  padding: 2rem auto;
+  margin-top: 0.5rem;
+  // width: 80rem;
+  font-size: 1.5rem;
   font-family: 'Roboto', sans-serif;
-  width: 15rem;
-  max-width: 80%;
-  justify-self: center;
+  color: white;
+  text-shadow: 0.075rem 0.075rem black;
+
+  .box1 {
+    // background: red;
+    justify-self: end;
+    grid-area: box1;
+    // font-size: 2rem;
+  }
+
+  .box2 {
+    // background: blue;
+    // display: none;
+    grid-area: box2;
+    justify-self: end;
+  }
+
+  .box3 {
+    // background: purple;
+    grid-area: box3;
+    justify-self: end;
+  }
 }
 
+// *controls section
 .container-clicker {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.btn-start,
-.btn-next {
-  font-size: 2rem;
-  padding: 1rem;
-}
-
 .btn {
-  padding: 1rem 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
   border: 0.15rem;
   border-style: solid;
-  border-radius: 0.75rem;
   outline: none;
   &:hover {
-    background-color: #fa680a;
+    background-color: $color-tertiary;
   }
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.btn-start {
+  font-size: 7rem;
+  padding: 3rem 8rem;
+  margin: 5rem;
+}
+
+.btn-next {
+  font-size: 2rem;
+  padding: 1.5rem 2rem;
+  // margin: 1rem;
 }
 
 .hidden {
@@ -88,40 +157,11 @@ body {
 }
 
 .selected-answer {
-  background: #fa660ad6;
+  background: $color-tertiary-selected;
 }
 
-.results-container {
-  display: grid;
-  grid-template-columns: repeat(3, auto);
-  column-gap: 4rem;
-  align-items: center;
-  justify-self: center;
-  padding: 1rem;
-  margin: 1rem;
-  font-size: 2rem;
-  font-family: 'Roboto', sans-serif;
-  color: white;
-  text-shadow: 0.075rem 0.075rem black;
-}
-
-.results-page-title {
-  font-size: 3rem;
-  color: white;
-  text-shadow: 0.15rem 0.15rem black;
-}
-
-.results-user-answers {
-  margin: 1rem 1rem;
-}
-
-.correct {
-  // display: none;
-  // align-items: center;
-  // justify-self: center;
-}
-
-#successAudio {
+#successAudio,
+#failureAudio {
   visibility: hidden;
   width: 0;
   height: 0;

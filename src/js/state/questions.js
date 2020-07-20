@@ -5,136 +5,111 @@
 
 export default [
   {
-    question: 'question 1',
+    question:
+      'The document object, like all other global variables, is a property of which object?',
     answers: [
       {
-        value: 'num 1',
+        value: 'location',
+        correct: false,
+      },
+      {
+        value: 'body',
+        correct: false,
+      },
+      {
+        value: 'window',
         correct: true,
       },
       {
-        value: 'number 2',
-        correct: false,
-      },
-      {
-        value: 'n3',
-        correct: false,
-      },
-      {
-        value: '4',
+        value: 'localStorage',
         correct: false,
       },
     ],
   },
   {
-    question: 'question 2',
+    question:
+      'The ___ is a representation of the document that JavaScript uses to navigate and make changes to a webpage.',
     answers: [
       {
-        value: 'n1 qy',
+        value: 'global object',
         correct: false,
       },
       {
-        value: 'n2 qy',
+        value: 'chrome dev tools',
         correct: false,
       },
       {
-        value: 'n3 qy',
+        value: 'console',
         correct: false,
       },
       {
-        value: 'n4 qy',
+        value: 'DOM',
         correct: true,
       },
     ],
   },
   {
-    question: 'question 3',
+    question: 'Which of the following is NOT a reserved word in JavaScript?',
     answers: [
       {
-        value: 'n1 qy',
+        value: ' interface',
         correct: false,
       },
       {
-        value: 'n2 qy',
-        correct: false,
-      },
-      {
-        value: 'n3 qy',
-        correct: false,
-      },
-      {
-        value: 'n4 qy this one is right',
-        correct: true,
-      },
-    ],
-  },
-  {
-    question: 'question 4',
-    answers: [
-      {
-        value: 'n1 qy',
-        correct: false,
-      },
-      {
-        value: 'n2 qy correct',
+        value: 'program',
         correct: true,
       },
       {
-        value: 'n3 qy',
+        value: 'throws',
         correct: false,
       },
       {
-        value: 'n4 qy',
+        value: 'short',
         correct: false,
       },
     ],
   },
   {
-    question: 'question 5',
+    question: 'What causes an endless loop?',
     answers: [
       {
-        value: 'n1 qy',
-        correct: false,
-      },
-      {
-        value: 'n2 qy',
-        correct: false,
-      },
-      {
-        value: 'n3 true',
+        value: `When the loop's condition never evaluates to false`,
         correct: true,
       },
       {
-        value: 'n4 qy',
+        value: 'When you use vim as your text editor',
         correct: false,
+      },
+      {
+        value: 'when you use a while loop',
+        correct: false,
+      },
+      {
+        value: `when you forget to add 'continue' statement`,
+        correct: false,
+      },
+    ],
+  },
+  {
+    question:
+      'Which of the following statements will make the JavaScript interpreter exit a loop even when the loop condition is still true?',
+    answers: [
+      {
+        value: 'stop',
+        correct: false,
+      },
+      {
+        value: 'return',
+        correct: false,
+      },
+      {
+        value: 'exit',
+        correct: false,
+      },
+      {
+        value: 'break',
+        correct: true,
       },
     ],
   },
 ]
-
-// console.log(questions[index].answers.correct)
-
-// {
-//   question2: 'question 2',
-//   answer2: 'answer 2',
-// },
-// {
-//   question3: 'question 3',
-//   answer3: 'answer 3',
-// },
-// {
-//   question4: 'question 4',
-//   answer4: 'answer 4',
-// },
-// {
-//   question5: 'question 5',
-//   answer5: 'answer 5',
-// },
-// {
-//   question6: 'question 6',
-//   answer6: 'answer 6',
-// },
-// {
-//   question7: 'question 7',
-//   answer7: 'answer 7',
-// },
-// ]

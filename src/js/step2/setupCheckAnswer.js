@@ -1,7 +1,7 @@
 import handleAnswerSelected from './handleAnswerSelected'
 import handleNextClicked from './handleNextClicked'
 
-// 2.A
+// *2.A
 export default function setupCheckAnswer() {
   const btnAnswers = document.querySelectorAll('[id^="answer"]')
 

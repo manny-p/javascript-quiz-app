@@ -1,6 +1,8 @@
 import renderCurrentQuestion from '../step1/renderCurrentQuestion'
+import questions from '../state/questions'
+import _ from 'lodash'
 
-// * 0.B
+// *0.B
 export default function startGame() {
   // remove the start button element
   const btnStart = document.querySelector('#btn-start')
@@ -22,6 +24,7 @@ export default function startGame() {
   One for the results data, one for tracking the index of the current question. */
   window.userResultsData = []
   window.indexOfCurrentQuestion = 0
+  window.questions = _.shuffle(questions)
 
   renderCurrentQuestion()
 }
